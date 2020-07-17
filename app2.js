@@ -69,4 +69,10 @@ function makeLaunchLI(launch) {
 }
 
 const btn = document.querySelector('#getLaunches');
-btn.addEventListener('click', getLaunches, false);
+btn.addEventListener(
+	'click',
+	function() {
+		getLaunches();
+	},
+	{ once: true }
+);
